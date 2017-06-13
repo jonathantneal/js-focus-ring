@@ -1,0 +1,58 @@
+{
+  "name": "js-focus-ring",
+  "version": "1.0.0",
+  "description": "Deliver a consistent focus experience to browsers",
+  "author": "Jonathan Neal <jonathantneal@hotmail.com>",
+  "license": "CC0-1.0",
+  "repository": "jonathantneal/js-focus-ring",
+  "homepage": "https://github.com/jonathantneal/js-focus-ring#readme",
+  "bugs": "https://github.com/jonathantneal/js-focus-ring/issues",
+  "module": "js-focus-ring.js",
+  "main": "js-focus-ring-env.js",
+  "files": [
+    "js-focus-ring.js",
+    "js-focus-ring-env.js",
+    "js-focus-ring-env.js.map"
+  ],
+  "scripts": {
+    "clean": "git clean -X -d -f",
+    "prepublish": "npm test && npm run prepublish:js",
+    "prepublish:js": "rollup --config .rollup.js && gzip-size js-focus-ring.env.js",
+    "test": "echo 'Running tests...'; npm run test:js",
+    "test:js": "eslint js-focus-ring.js --cache"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^3.19.0",
+    "eslint-config-dev": "2.0.0",
+    "gzip-size": "^3.0.0",
+    "pre-commit": "^1.2.2",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-uglify": "^2.0.1"
+  },
+  "eslintConfig": {
+    "extends": "dev"
+  },
+  "keywords": [
+    "js",
+    "dom",
+    "prollyfill",
+    "focus",
+    "ring",
+    "pseudo",
+    "selector",
+    "css",
+    "input",
+    "keyboard",
+    "mouse",
+    "pointer",
+    "element",
+    "outline",
+    "javascript",
+    "script"
+  ]
+}
