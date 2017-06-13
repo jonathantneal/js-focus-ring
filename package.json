@@ -1,0 +1,10 @@
+{
+  "name": "js-focus-ring",
+  "scripts": {
+    "test": "echo 'No tests...'"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "private": true
+}
